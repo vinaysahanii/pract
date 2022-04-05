@@ -1,0 +1,241 @@
+https://github.com/svinay7/pract/blob/main/cc
+
+CF ALL PRACTICAL
+
+Practical 3
+
+
+steps
+1. Open ftk image
+2. Enter details and creat any folder
+3. Click next and details
+4. click data source
+5. select disk image 
+6. path and folder which was created in the second step
+7. In browser search for https://www.cfreds.nist.gov/dfrws/Rhino_Hunt.html
+8. And download the zip.archieve file the extract it after that browse the .dd file as a source file
+9. Click on Open and Click on next
+10. the files will come on the left side and select the file and if you want to searrch you xan search so paste somthing in the folder created
+11. Then click on generate report 
+12. select html report
+13. click in report link
+14. open the rhino hunt folder and just open and close the rhino file 
+
+
+15. open ws
+16. select file tab and open file
+17. selec the rhino file
+18. search in ws th following : ftp,ftp-data,http
+
+
+=====================================================================================================================
+
+
+Practical 4
+
+Aim : Capturing and analyzing network packets using wireshark
+
+steps: 
+
+1. open ws
+2. slect view tab
+3. then in that solor rules
+4. select any of them and the right click and then apply as filter
+
+
+1. open ws and in search box type :
+2. ip.addr==192.168.1.71
+
+
+
+==============================================================================================
+
+
+Practical 5
+
+Aim: Analyze the packets provided in lab and solve the questions using wireshark
+
+
+steps:
+
+1. select "asksnope" file adnopen with wireshark
+2. search for www.snopes.com
+3. and on ws type http
+4. adn in the 2 row rightclick on http and apply as column
+5. in forst row search for ask snopes and right click and select follow and tcp stream
+6. close it
+7. in ws search for " frame mathes"(?!)cell" " and press enter
+8. in ws search for " frame mathes"(?!)zillow" " and press enter
+9. and then right in the folder showing tcp in 2 row select protocol preference andselect allow TCP stream
+10. open file and export and then save all
+11. and then open the folder where you saved all
+12. search zillow in it and open with broswer and the close it 
+13. then in ws swarch for "http.response" and remoce it
+14. then tyoe "http.server contains "apache" "
+15. search for text/javascript in INfo column
+
+
+
+================================================================================================
+
+Practical 6  
+
+Aim: sysinternal tools
+
+1.Download Sysinternals tools and extract the file then check the tools
+2. Monitor Live Processes (Procmon.exe)
+3. open file tab and click in folter and add
+4. explorer.exe adn ok 
+
+capture ram steps:
+1. open rammap and show it 
+
+capture tcp/upp packets :
+1. open tcp view software and show it
+
+Monitor Hard Disk :
+1. Open disk mon adn show it
+
+Monitor Virtual Memory
+1. OPen Vmmap and show it 
+
+Monitor cach memory
+1. open cacheset and appl and show it
+
+
+============================================================================================
+
+
+
+Practical 7 
+
+Aim : recovering and inspecting deleted files
+
+steps :
+Add evidence item
+
+select logical drice
+
+select drive
+
+go to orphan folder and tight click on it and 
+
+select ex[ort files on any of the files
+
+select the location where you want to expor
+
+and then find it and open it
+
+
+
+=====================================================================================
+
+Practical 9
+
+Aim : Email Forensics 
+
+steps : 
+
+Step-1) Open FTK Imager and download the required file ‘Jim_shu’s.pst’ from below link
+https://drive.google.com/drive/folders/1q6lno5iPQ9-IiiJzYqdRWAkMK18gi4AL
+Click on OK
+
+Step-2) After that give the information about case and select the path to store data
+
+Click on next
+Click on next
+Click on next
+Click on next
+
+Click on Add Evidence and select the Evidence Case ‘Individual File’
+
+Click on continue and browse the file
+
+Click on Open and give the Email evidence
+
+Click on OK
+
+Click on next
+
+Click on Finish
+
+Step-4) After that select the category Email and choose a deleted email
+
+After selection of deleted email the information of that will be given below in the viewer box i.e.,
+given below
+
+Step-5) Now copy the Standard Header Information
+
+Step-6) Open the browser and search for Message Header Analyzer
+
+Then paste your copied information here and click on Analyze headers
+
+Step-7) To make the report of the Email Forensics go to FileEmail Wizard
+
+After that fill the case information
+
+Click on next
+Click on next
+Click on next
+Click on next
+Click on next
+Click on next
+Click on next
+
+Step-8) To export the files go to File
+
+Select Export HTML view then click on OK after that below popup will open
+
+Click on OK
+
+After that go to that file location where you export the report and open the report
+
+
+
+
+=====================================================================================
+
+Practical 10
+
+Aim : Web Forensics
+
+Steps:
+Step-1) Download the Browser History Examiner and open it.
+
+Click on Continue Trail
+
+Step-2) Go to FileCapture History
+
+After that below window will open
+
+Click on next
+Click on Capture
+Click on Load
+
+Step-3) Now go to FileLoad History
+
+Click on next
+
+Click on Load after that the below window will appear
+Department
+
+Step-4) Export the captured file as HTML, Excel, CSV, XML
+Got to FileExportExport to HTML
+
+Click on Export
+Then give the file name
+
+Click on Save after that the below popup window will come
+
+Click on OK
+
+Step-5) Go to the file location that you capture and open it
+
+Step-6) Generate the report
+
+Go to FileReportSave as PDF
+
+Give the filename
+
+Click on Save
+
