@@ -1,0 +1,22 @@
+1 Use Google and Whois for Reconnaissance 
+
+2 a) Use CrypTool to encrypt and decrypt passwords using RC4 algorithm
+  b) Use Cain and Abel for cracking Windows account password using Dictionary attack and to decode wireless network passwords.
+
+3 a) Run and analyze the output of following commands in Linux – ifconfig, ping, netstat, traceroute
+  b) Perform ARP Poisoning in Windows
+
+4 Use NMap scanner to perform port scanning of various forms – ACK, SYN, FIN, NULL, XMAS
+
+5 a) Use Wireshark (Sniffer) to capture network traffic and analyze
+  b) Use Nemesy to launch DoS attack
+
+6 Simulate persistent cross-site scripting attack 12-02-2021 35-42
+
+7 Session impersonation using Firefox andTamper Data add-on
+
+8 Perform SQL injection attack 17-02-2021 51-62
+
+9 Create a simple keylogger using python 10-03-2021 63-64
+
+10 Using Metasploit to exploit (Kali Linux) 
