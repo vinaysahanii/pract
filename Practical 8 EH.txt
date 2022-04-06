@@ -1,0 +1,19 @@
+ Practical 8
+ Open XAMPP control panel and start Apache & MySQL
+ Now open the browser and go to http://localhost/dvwa/ . Enter the username and password to login.(uname: admin & pwd: password) .
+ Then go to DVWA Security and change it to Low from Impossible. Then click on Submit.
+ Then click on SQL Injection.
+ Write User ID as ‘1’ in the textbox and click on submit.
+ Enter User ID as ‘2’ and click on Submit
+ Enter User ID as ‘4’ and click on Submit
+ Enter User ID as ‘5’ and click on Submit
+ Enter User ID as ‘1=1’ and click on Submit.
+ Enter User ID as ‘2=2’ and click on Submit.
+Enter User ID as ‘3=3’ and click on Submit
+ Enter User ID as ‘4=4’ and click on Submit.
+ Enter User ID as ‘5=5’ and click on Submit.
+Enter User ID as ‘1*’ and click on Submit.
+Enter User ID as ‘2*’ and click on Submit.
+ Enter User ID as ‘3*’ and click on Submit.
+Enter User ID as ‘4*’ and click on Submit.
+Enter User ID as ‘5*’ and click on Submit.

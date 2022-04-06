@@ -1,0 +1,43 @@
+Practical-2
+
+Aim: 
+a) Use CrypTool to encrypt and decrypt passwords using RC4 algorithm
+
+b) Use Cain and Abel for cracking Windows account password using Dictionary attack and
+to decode wireless network passwords
+
+Steps:
+
+Step-1) Download the CrypTool and open it
+
+Step-2) Write the text in the above window that you want to encrypt and go to
+Encrypt/Decrypt→ Symmetric(modern)→ RC4
+
+After that select the bits
+
+Click on Encrypt
+
+Step-3) To analysis the encryption go to Analysis→ Symmetric 
+Encryption(modern)→ RC4
+
+Step-4) Again select the bit but bit should be same as the encryption bit
+
+Click on Start
+
+
+b) Use Cain and Abel for cracking Windows account password using Dictionary attack
+and to decode wireless network passwords
+
+Open Cain & Abel→ Click Hash Calculator→ Enter the Password to Convert
+
+1. Dictionary Attack
+
+a. In the empty field paste the value ou have just converted
+b. Right click on the value->dictionary attack-> dialog box will appear
+c. Click on file->add to list-> wordlist->chec all the option -> start
+
+
+2. Brute Force Attack
+
+a. Right click on the value→ brute force attack→ dialog box will appear i.e., given 
+below

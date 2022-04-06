@@ -1,0 +1,33 @@
+Practical-4
+
+Aim: Use NMap scanner to perform port scanning of various forms – ACK, SYN, FIN, NULL,
+XMAS
+
+Download the Nmap and open it after that perform port scanning for various forms i.e., given 
+below:
+
+1. ACK
+
+For ACK give the below command
+Command: nmap -sA -T4 scanme.nmap.org
+
+2. SYN
+
+For SYN give the below command
+Command: nmap -sF -T4 scanme.nmap.org
+
+3. FIN
+
+For FIN give the below command
+Command: nmap -sN -p22 scanme.nmap.org
+
+4. NULL
+
+For NULL give the below command
+Command: nmap -p22,113,139 scanme.nmap.org
+
+5. XMAS
+For XMAS give the below command
+Command: nmap -sX 8.8.8.8
+
+

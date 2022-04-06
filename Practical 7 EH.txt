@@ -1,0 +1,29 @@
+Practical-7
+Aim: Session impersonation using Firefox and Tamper Data add-on
+
+Steps:
+Step-1) Open the Mozilla Firefox and click on option menu and select Add-Ons
+
+Then select Extension and search for Tamper and Choose “Tamper Data for FF Quantum”
+
+Click on Add to Firefox
+
+Again, click on Add to allow access your data for all websites
+Step-2) Now go to the link https://www.razorba.com/Default.aspx and select an item
+
+Add the few items to the cart
+
+Then click on Proceed to Checkout
+
+Then select One day
+
+After that below window will appear for next process click on the extension of Tamper
+
+Click on the extension
+
+Then click on Yes
+
+Click on PayPal
+
+It will show you the all items that you added to cart with their amount and quantity
+

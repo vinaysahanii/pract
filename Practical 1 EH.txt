@@ -1,0 +1,14 @@
+Practical-1
+Aim: Use Google and Whois for Reconnaissance
+
+Step-1) One the browser and go to who.is (https://who.is/) i.e., given below
+
+then search for any website that you want
+1. Google
+2. Godaddy
+3. Youtube
+4. Facebook
+5. Instagram
+
+
+

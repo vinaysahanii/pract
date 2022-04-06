@@ -1,0 +1,43 @@
+Practical-3
+Aim: a) Run and analyze the output of following commands in Linux – ifconfig, ping, netstat,
+traceroute
+b) Perform ARP Poisoning in Windows
+
+
+a)
+1. ifconfig
+$ifconfig
+
+2. ping
+$ping -c 5 www.google.com
+
+3. netstat
+$netstat
+$netstat -r
+
+4. traceroute
+$traceroute 10.0.2.15
+
+
+
+b) Perform ARP Poisoning in Windows
+
+ARP
+Steps:
+Step-1) Open cmd as administrator and perform the ARP command i.e given below
+arp -a
+
+Step-2) Check the IP address using the below command
+ipconfig/all
+
+Step-3) To add a IP address write the below command
+arp -s 192.168.0.105 8c-89-a5-91-d6-3f
+
+to check the IP address is added or not use the below command
+arp -a
+
+Step-4) To delete a particular IP address give the below command
+arp -d 192.168.0.105
+
+After deleting check the IP address that is deleted or not using below command
+arp -a
