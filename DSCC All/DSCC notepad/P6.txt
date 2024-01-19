@@ -1,0 +1,70 @@
+Assignment 6
+Write a report on Storage as a Service (Staas) using Google Drive
+
+I.Introduction to Google Drive:
+Google Drive is a cloud-based file storage and synchronization service developed by Google. Launched in 2012, it allows users to store files in the cloud, synchronize files across devices, and share files with others. Google Drive provides users with a secure and accessible platform to store various types of files, fostering collaboration and ease of access.
+
+II.Sharing Feature in Google Drive:
+One of the key features of Google Drive is its robust sharing capabilities. Users can share files and folders with specific individuals or groups, controlling access permissions such as view-only or editing rights. The collaboration features facilitate real-time editing and commenting, enhancing teamwork and communication among users. The link-sharing option enables easy distribution of files to a broader audience.
+
+III.Demonstrate Uploading and Storage on Google Drive (My Drive):
+Uploading and storing files on Google Drive is a straightforward process. Users can simply drag and drop files or use the "New" button to upload documents, images, or other entities. Google Drive automatically organizes uploaded content in the user's "My Drive," providing a centralized location for easy retrieval. The storage capacity can be expanded through subscription plans, offering flexibility based on user needs.
+
+
+
+
+IV.Sharing Policies:
+Google Drive offers customizable sharing policies, allowing users to manage access levels and security. Users can set sharing settings at the individual file or folder level, controlling who can view, edit, or comment on their content. Additionally, advanced sharing options enable link expiration, password protection, and restricting access to specific users with Google accounts.
+
+V.Google Drive Tools and Options:
+Google Drive provides a range of tools and options to enhance user experience. Features such as Google Docs, Sheets, and Slides enable collaborative document editing in real-time. Version history allows users to track changes and revert to previous states. The powerful search functionality helps users quickly locate files, and the offline mode ensures accessibility even without an internet connection. Google Drive also integrates with other Google Workspace applications, providing a seamless experience across the productivity suite.
+
+In conclusion, Google Drive's Storage as a Service (STaaS) model offers a versatile and user-friendly platform for file storage, sharing, and collaboration. Its intuitive interface, robust sharing policies, and integration with productivity tools make it a valuable solution for individuals and businesses seeking efficient cloud-based storage and collaboration capabilities.
+
+
+
+
+
+
+
+
+
+
+
+
+Google Drive:
+Google Drive is a file storage and synchronization service developed by Google. Launched on April 24, 2012, Google Drive allows users to store files in the cloud (on Google's servers), synchronize files across devices, and share files. In addition to a web interface, Google Drive offers apps with offline capabilities for Windows and macOS computers, and Android and iOS smartphones and tablets. Google Drive encompasses Google Docs, Google Sheets, and Google Slides, which are a part of the Google Docs Editors office suite that permits collaborative editing of documents, spreadsheets, presentations, drawings, forms, and more. Files created and edited through the Google Docs suite are saved in Google Drive.
+Google Drive offers users 15 GB of free storage, sharing it with Gmail and Google Photos. Google Drive also offers 100 GB, 200 GB, and 2 TB through optional Google One paid plans. Files uploaded can be up to 750 GB in size. Users can change privacy settings for individual files and folders, including enabling sharing with other users or making content public. On the website, users can search for an image by describing its visuals, and use natural language to find specific files, such as "find my budget spreadsheet from last December".
+Storage:
+Google gives every user 15 GB (1 GB = 1 billion bytes) of free storage. This cloud storage is also shared with Gmail and Google Photos. Users can purchase additional space through either a monthly or yearly payment. The option of yearly payments was introduced in December 2016, and is limited to the 100 GB, 200 GB or 2 TB storage plans. Furthermore, the yearly payments offer a discount.[37] In May 2018, Google announced that storage plans (including the free 15 gigabyte plan) would be moved over to Google One.
+Before the introduction of Google Drive, Google Docs initially provided 15 GB of storage free of charge. On April 24, 2012, Google Drive was introduced with free storage of 5 GB. Storage plans were revised, with 25 GB costing $2.49/month, 100 GB costing $4.99/month and 1 TB costing $49.99/month. Originally, Gmail, Google Docs, and Picasa had separate allowances for free storage and a shared allowance for purchased storage. Between April 2012 and May 2013, Google Drive and Google+ Photos had a shared allowance for both free and purchased storage, whereas Gmail had a separate 10 GB storage limit, which increased to 25 GB on the purchase of any storage plan. In September 2012, Google announced that a paid plan would now cover total storage, rather than the paid allocation being added to the free; e.g., a 100 GB plan allowed a total of 100 GB rather than 115 GB as previously. In May 2013, Google announced the overall merge of storage across Gmail, Google Drive and Google+ Photos, giving users 15 GB of unified free storage between the services.
+Features:
+a.Sharing: Google Drive incorporates a system of file sharing in which the creator of a file or folder is, by default, its owner. The owner can regulate the public visibility of the file or folder. Ownership is transferable. Files or folders can be shared privately with particular users having a Google account, using the email address (usually, but not necessarily, ending in @gmail.com) associated with that account. Sharing files with users not having a Google account requires making them accessible to "anybody with the link". This generates a secret URL for the file, which may be shared via email or private messages. Files and folders can also be made "public on the web", which means that they can be indexed by search engines and thus can be found and accessed by anyone. The owner may also set an access level for regulating permissions. The three access levels offered are "can edit", "can comment" and "can view". Users with editing access can invite others to edit.
+b.Third-Party apps: A number of external web applications that work with Google Drive are available from the Chrome Web Store. To add an app, users are required to sign in to the Chrome Web Store, but the apps are compatible with all supported web browsers. Some of these apps are first-party, such as Google Docs, Sheets, and Slides. Drive apps operate on online files and can be used to view, edit, and create files in various formats, edit images and videos, fax and sign documents, manage projects, create flowcharts, etc. Drive apps can also be made the default for handling file formats supported by them. Some of these apps also work offline on Google Chrome and ChromeOS. All of the third-party apps are free to install. However, some have fees associated with continued usage or access to additional features. Saving data from a third-party app to Google Drive requires authorization the first time. The Google Drive software development kit (SDK) works together with the Google Drive user interface and the Chrome Web Store to create an ecosystem of apps that can be installed into Google Drive. In February 2013, the "Create" menu in Google Drive was revamped to include third-party apps, thus effectively granting them the same status as Google's own apps
+c.File Viewing: The Google Drive viewer on the web allows the following file formats to be viewed: 
+Native formats (Docs, Sheets, Slides, Forms, Drawings, My Maps, Jamboard, Sites)
+Image files (.JPEG, .PNG, .GIF, .TIFF, .BMP, .WEBP .HEIF .SVG)
+Video files (.WEBM, .MPEG4, .3GPP, .MOV, .AVI, .MPEG, .MPEGPS, .WMV, .FLV, .OGG .VOB)
+Audio formats (.MP3, .M4A, .WAV, .OGG .Opus)
+Text files (.TXT)
+Markup/Code (.CSS, .HTML, .PHP, .C, .CPP, .H, .HPP, .JS .Java .PY)
+Microsoft Word (.DOC and .DOCX)
+Microsoft Excel (.XLS and .XLSX)
+Microsoft PowerPoint (.PPT and .PPTX)
+Adobe Portable Document Format (.PDF)
+Apple Pages (.PAGES)
+Adobe Illustrator (.AI)
+Adobe Photoshop (.PSD)
+Autodesk AutoCad (.DXF)
+Scalable Vector Graphics (.SVG)
+PostScript (.EPS, .PS)
+Python (.PY)
+Fonts (.TTF)
+XML Paper Specification (.XPS)
+Archive file types (.ZIP, .RAR, tar, gzip)
+.MTS files
+Raw Image formats (.DNG)
+Apple Keynote (.KEY)
+Apple Numbers (.Numbers)
+Files in other formats can also be handled through third-party apps that work with Google Drive, available from the Chrome Web Store.
+d.Backups: In December 2016, Google updated the Android app and website with a "Backups" section, listing the Android device and app backups saved to Drive. The section lets users see what backups are stored, the backups' sizes and details, and delete backups. In June 2017, Google announced that a new app, "Backup and Sync", would be able to synchronize any folder on the user's computer to Google. The app was released on July 12, 2017.
