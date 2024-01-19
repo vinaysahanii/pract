@@ -1,0 +1,123 @@
+
+Practical No. 8
+Class: MCA Sem-III                                                                                           Batch – I
+Subject: MCAL34 Distributed System & Cloud Computing
+Course Batch: 2022-24
+Topic: To develop Application for windows Azure using Windows 
+Azure Platform Training Kit and Visual Studio
+Date: 20-12-2023 
+1) Develop a simple application for Microsoft Windows Azure using Windows Azure platform Kit and Visual Studio 
+
+Steps 
+Step 1: To develop an application for Windows Azure on Visual Studio 2019, install the Visual Studio 2019.
+Step2:  ·Open Visual Studio 2019
+              · Click on create new project
+
+
+
+
+
+
+
+
+
+· After clicking on Create new project, a New Project Window will open type Azure cloud service in search box 
+In case you don’t get Azure cloud service (classic) go to installer and install Azure development
+
+In above window, choose Language as C#, Platform as Azure, Project as Cloud 
+Then select Azure Cloud Service(classic) option
+
+
+
+
+
+
+Click Next 
+Configure project window will appear
+
+
+Enter Project name(AzureCloudService1), then click on Create button.
+New Microsoft Azure Cloud Service(Classic) window will appear as below. Select Visual C# -> ASP.net Web Role.
+
+
+Click on > button for add web role to solution.  Below window will appear.
+· Click on OK button
+· Below window will appear
+
+
+
+
+
+
+
+
+· Select Empty Option for creating empty project template and then click on Create Button. Below window will appear.
+
+
+
+
+
+
+
+
+
+
+Right Click on WebRole1 in Solution Explorer Window.
+
+
+
+
+
+
+
+
+
+Then click on Add Button and Select Web Form
+
+
+
+
+
+
+
+Give Name to Web Form
+
+
+Click on OK Button. Below window will appear.
+
+
+
+
+
+
+
+
+
+Add the below code in web form you have created
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebRole1.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <h1>Hello World !!!</h1>
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+
+
+Then click on Debug and Execute Project (click on green arrow)
+
+Following is the output:
+
+
