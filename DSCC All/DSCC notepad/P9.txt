@@ -1,0 +1,58 @@
+
+Practical No. 9
+Topic: Google App Engine 
+1) Develop an application and execute on Google App Engine using Eclipse IDE 
+Steps for Installing Google App Engine
+1)Create and set a workspace for Eclipse IDE
+
+2)Once launched visit Eclipse Marketplace and search for Google Cloud Tools for Eclipse
+            
+  
+3)Install by clicking on confirm
+       
+
+4)Install Google Cloud SDK from the following link
+             https://cloud.google.com/sdk/docs/install-sdk
+             
+
+
+
+
+
+
+5)Below gcloud init Command Prompt will appear
+      
+     
+Once you choose  options Login with a new account below screen will appear sign in with    Google
+
+Below Screen will appear you are now authenticated with the cloud SDK!
+
+
+
+
+gcloud components install app-engine-java
+
+6)Once the eclipse window appear -click on WINDOW->PREFERENCES
+      
+7)Below Preferences window will appear SEARCH FOR GOOGLE
+
+8)Click for APP ENGINE JAVA COMPONENTS and click on APPLY AND CLOSE
+      
+9)In Eclipse IDE create Google App Engine based New standard Java Project
+      
+10)Below screen will appear New App Engine Standard Project
+            Provide the Project Name & Java Package as mentioned below
+            
+11)Below screen will appear
+           FROM App Engine Standard Libraries
+           Select  1.App Engine API
+           Select 2.Objectify
+           Click  on Finish
+
+
+12)Below screen shows the created project file HelloAppEngine.java
+      
+
+13)After execution
+
+ 
