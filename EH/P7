@@ -1,0 +1,117 @@
+Practical 7
+Wireless network hacking, cloud computing security, cryptography :
+1 .Using Cryptool to encrypt and decrypt password,
+2. Implement encryption and decryption using Ceaser Cipher.
+Self-Learning Topics: implementing additional encryption algorithms.
+
+
+1.Using Cryptool to encrypt and decrypt password,
+
+Perform encryption and decryption of text by using  cryptool 2
+Using the cryptool 2 tool perform the following 
+a) Ceaser Cipher
+b) Substitution Cipher
+c) Playfair Cipher
+Answer: 
+Download the current versions of CrypTool 2. There are two versions of CrypTool 2, the stable version and the nightly version. Both versions are available as an EXE installer and as a ZIP archive. The EXE installer supports the creation of a start menu entry, of a desktop link and of an Explorer file type. If you don't know which one to choose, you should prefer the stable version with EXE installer. No admin rights are needed for the installation. Each installation type (EXE and ZIP) has its own online update mechanism. For execution, a 64-bit Windows and Microsoft .NET Framework 4.7.2 or higher are needed.
+Download Stable version
+The "Stable Version" is the CrypTool 2 release version
+The current release version is CrypTool 2.1
+Following is the link for download cryptool 2 
+https://www.cryptool.org/en/ct2/downloads
+Snapshot of Cryptool 2
+
+Main function Click on wizard
+
+Select Task Encryption and decryption
+
+Select classic Encryption /decryption
+
+Select Caesar cipher
+
+Enter message in input-for eg. Hi how r u   ,select encrypt 
+
+Caesar cipher : decryption output
+
+
+
+
+
+2.Implement encryption and decryption using Ceaser Cipher.
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Scanner;
+public class CeaserCipher
+ {
+	static Scanner sc=new Scanner(System.in);
+	static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+	public static void main(String[] args) throws IOException
+ 	{
+		// TODO code application logic here
+		System.out.print("Enter any String: ");
+		String str = br.readLine();
+		System.out.print("\nEnter the Key: ");
+		int key = sc.nextInt();
+		String encrypted = encrypt(str, key);
+
+		System.out.println("\nEncrypted String is: " +encrypted);
+
+		String decrypted = decrypt(encrypted, key);
+System.out.println("\nDecrypted String is: "+decrypted); System.out.println("\n");
+	}
+static String encrypt(String str, int key)
+{
+ 	String encrypted = "";
+	for(int i = 0; i < str.length(); i++) 
+	{
+		int c = str.charAt(i);
+		if(Character.isUpperCase(c)) 
+		{
+			c = c + (key % 26);
+			if (c > 'Z')
+				c = c - 26;
+		}
+		if(Character.isLowerCase(c)) 
+		{
+			c = c + (key % 26);
+			if (c > 'z')
+			c = c - 26;
+		}
+		encrypted += (char) c;
+	}
+	return encrypted;
+}
+static String decrypt(String str, int key)
+{ 
+	String decrypted = "";
+	for(int i = 0; i < str.length(); i++) 
+	{
+		int c = str.charAt(i);
+		if(Character.isUpperCase(c))
+		 {
+			c = c - (key % 26);
+			if (c < 'A')
+				c = c + 26;
+		}
+		if(Character.isLowerCase(c)) 
+		{
+			c = c - (key % 26);
+			if (c < 'a')
+				c = c + 26;
+		}
+		decrypted += (char) c;
+	}
+	return decrypted;
+}
+}
+Output:
+Enter any String: Hello World
+Enter the Key: 5
+Encrypted String is: MjqqtBtwqi
+Decrypted String is: Hello World
+
+
+
