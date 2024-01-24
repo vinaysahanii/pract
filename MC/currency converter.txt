@@ -1,0 +1,121 @@
+package com.example.cur_con1;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.Toast;
+
+import java.sql.Time;
+
+public class MainActivity extends AppCompatActivity {
+
+    EditText ed1, ed2;
+    Spinner sp1, sp2;
+    String sp1Value, sp2Value;
+    Button btn;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        ed1 = findViewById(R.id.ednum1);
+        ed2 = findViewById(R.id.ednum2);
+
+        sp1 = findViewById(R.id.spinner1);
+        sp2 = findViewById(R.id.spinner2);
+
+        btn = findViewById(R.id.button);
+
+        ArrayAdapter<CharSequence> arrayAdapter = ArrayAdapter.createFromResource(this, R.array.currencies, android.R.layout.simple_spinner_item);
+        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        sp1.setAdapter(arrayAdapter);
+        sp2.setAdapter(arrayAdapter);
+
+        sp1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                sp1Value = (String) adapterView.getItemAtPosition(i);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(getApplicationContext(), "Select an item", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        sp2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                sp2Value = (String) adapterView.getItemAtPosition(i);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+                Toast.makeText(getApplicationContext(), "Select an item", Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
+    public void convertValues(View view){
+        //Indian Rupee Conversion
+        if(sp1Value.equals("Indian Rupee") && sp2Value.equals("Dollar")){
+            Toast.makeText(getApplicationContext(), "Inside", Toast.LENGTH_LONG).show();
+            float val1 = Float.parseFloat(ed1.getText().toString());
+            ed2.setText(String.valueOf(val1 * 0.012));
+        }
+        else if(sp1Value.equals("Indian Rupee") && sp2Value.equals("Euro")){
+            Toast.makeText(getApplicationContext(), "Inside", Toast.LENGTH_LONG).show();
+            float val1 = Float.parseFloat(ed1.getText().toString());
+            ed2.setText(String.valueOf(val1 * 0.011));
+        }
+        else if(sp1Value.equals("Indian Rupee") && sp2Value.equals("Indian Rupee")){
+            Toast.makeText(getApplicationContext(), "Inside", Toast.LENGTH_LONG).show();
+            float val1 = Float.parseFloat(ed1.getText().toString());
+            ed2.setText(String.valueOf(val1 * 1));
+        }
+
+        //Dollar Conversion
+        else if(sp1Value.equals("Dollar") && sp2Value.equals("Indian Rupee")){
+            Toast.makeText(getApplicationContext(), "Inside", Toast.LENGTH_LONG).show();
+            float val1 = Float.parseFloat(ed1.getText().toString());
+            ed2.setText(String.valueOf(val1 * 82.87));
+        }
+        else if(sp1Value.equals("Dollar") && sp2Value.equals("Euro")){
+            Toast.makeText(getApplicationContext(), "Inside", Toast.LENGTH_LONG).show();
+            float val1 = Float.parseFloat(ed1.getText().toString());
+            ed2.setText(String.valueOf(val1 * 0.93));
+        }
+        else if(sp1Value.equals("Dollar") && sp2Value.equals("Dollar")){
+            Toast.makeText(getApplicationContext(), "Inside", Toast.LENGTH_LONG).show();
+            float val1 = Float.parseFloat(ed1.getText().toString());
+            ed2.setText(String.valueOf(val1 * 1));
+        }
+
+        //Euro Conversion
+        else if(sp1Value.equals("Euro") && sp2Value.equals("Indian Rupee")){
+            Toast.makeText(getApplicationContext(), "Inside", Toast.LENGTH_LONG).show();
+            float val1 = Float.parseFloat(ed1.getText().toString());
+            ed2.setText(String.valueOf(val1 * 88.93));
+        }
+        else if(sp1Value.equals("Euro") && sp2Value.equals("Dollar")){
+            Toast.makeText(getApplicationContext(), "Inside", Toast.LENGTH_LONG).show();
+            float val1 = Float.parseFloat(ed1.getText().toString());
+            ed2.setText(String.valueOf(val1 * 1.07));
+        }
+        else if(sp1Value.equals("Euro") && sp2Value.equals("Euro")){
+            Toast.makeText(getApplicationContext(), "Inside", Toast.LENGTH_LONG).show();
+            float val1 = Float.parseFloat(ed1.getText().toString());
+            ed2.setText(String.valueOf(val1 * 1));
+        }
+    }
+
+
+}
