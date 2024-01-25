@@ -1,0 +1,30 @@
+
+Implement & Demonstrate: Handling Drop Down, List Boxes.
+
+package test1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class List {
+
+	public static void main(String[] args) {
+		
+		System.setProperty("webdriver.chrome.driver","E:\\Chrome Driver- Selenium\\117.0.5938.63\\chromedriver.exe" );
+		WebDriver wd = new ChromeDriver();
+		wd.get("file:////E:/multi.html");
+		Select s = new Select(wd.findElement(By.id("car")));
+		if(s.isMultiple()) {
+			s.selectByIndex(2);
+			s.selectByValue("3");
+			s.selectByVisibleText("Mercedes");
+			s.deselectAll();
+		}
+	}
+
+}
+
+
+
