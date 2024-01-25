@@ -1,0 +1,56 @@
+13)  Implement Assertion for the title of page.
+
+a) HARD ASSERTION
+package testng;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class hardassertion {
+  String className="HardAssertion";
+	@Test
+  public void f() {
+	  Assert.assertEquals("HardAssrt", "HardAssertion");
+	  Assert.assertEquals(className, "hardassertion");
+	  System.out.println("Successfully passed");
+  }
+}
+OUTPUT:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+b) SOFT ASSERTION
+package testng;
+
+import org.testng.Assert;
+import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+
+public class SoftAssertion {
+  String className="SoftAssertion";
+  SoftAssert softassert=new SoftAssert();
+	@Test
+  public void f() {
+	  softassert.assertTrue(true==true);
+	  softassert.assertEquals("SoftAssert", "SoftAssertion");
+	  softassert.assertEquals(className, "SoftAssertion");
+	  System.out.println("Last Statement Executed");
+  }
+}
+OUTPUT:
