@@ -1,0 +1,32 @@
+Implement & Demonstrate Alerts in selenium
+
+Code:
+AlertWindow.java
+package programs;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class AlertWindow {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "E:\\selenium-java-3.141.59\\117.0.5938.63\\chromedriver.exe");
+		
+		WebDriver wd = new ChromeDriver();
+		
+		wd.get("http://www.hyrtutorials.com/p/alertsdemo.html");
+		
+		wd.findElement(By.id("alertBox")).click();
+		
+		Alert alert = wd.switchTo().alert();
+		
+		System.out.println("Alert Text: " + alert.getText());
+		
+		alert.accept();
+	}
+
+}
+Output:
+
