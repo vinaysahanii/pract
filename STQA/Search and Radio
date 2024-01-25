@@ -1,0 +1,75 @@
+Implement & Demonstrate Search
+Code:
+Search.java:
+package programs;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Search {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "E:\\selenium-java-3.141.59\\117.0.5938.63\\chromedriver.exe");
+		
+		WebDriver wd = new ChromeDriver();
+		
+		wd.get("https://www.bing.com");
+		
+		wd.findElement(By.id("sb_form_q")).sendKeys("Virat Kohli");
+		wd.findElement(By.id("sb_form_q")).sendKeys(Keys.ENTER);
+	}
+}
+
+Output:
+
+
+
+
+
+Implement & Demonstrate Radio button
+
+Code:
+
+RadioButtonDemo.java
+
+package programs;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class RadioButtonDemo {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "E:\\selenium-java-3.141.59\\117.0.5938.63\\chromedriver.exe");
+		WebDriver wd = new ChromeDriver();
+		wd.get("https://demo.guru99.com/test/radio.html");
+		
+		wd.findElement(By.id("vfb-7-1")).click();
+		System.out.println("Radio Button 1 is Clicked");
+		
+		wd.findElement(By.id("vfb-7-2")).click();
+		System.out.println("Radio Button 2 is Clicked");
+		
+		WebElement element = wd.findElement(By.id("vfb-6-0"));
+		element.click();
+		
+		if(element.isSelected()) {
+			System.out.println("Checkbox 1 is Selected");
+		}
+		
+		WebElement element2 = wd.findElement(By.id("vfb-6-1"));
+		element2.click();
+		
+		if(element2.isSelected()) {
+			System.out.println("Checkbox 2 is Selected");
+		}
+	}
+}
+
+Output:
+
+
