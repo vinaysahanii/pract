@@ -1,0 +1,44 @@
+Implement & Demonstrate Window Handling
+Code:
+WindowHandling.java
+package programs;
+
+import java.util.Set;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class WindowHandling {
+
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "E:\\selenium-java-3.141.59\\117.0.5938.63\\chromedriver.exe");
+		
+		WebDriver wd = new ChromeDriver();
+		
+		wd.get("http://www.hyrtutorials.com/p/window-handles-practice.html");
+		
+		String parentWindowID = wd.getWindowHandle();
+		
+		System.out.println("Parent window ID: " + parentWindowID);
+		
+		wd.findElement(By.id("newWindowBtn")).click();
+		
+		Set<String> availableWindows = wd.getWindowHandles();
+		
+		for(String window : availableWindows) {
+			wd.switchTo().window(window);
+			System.out.println("Window Title: " + wd.getTitle());
+			
+			if(!window.equals(parentWindowID)) {
+				wd.manage().window().maximize();
+				wd.close();
+			}
+		}
+	}
+
+}
+
+Output:
+
+
