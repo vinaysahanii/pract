@@ -1,0 +1,83 @@
+
+Implement & Demonstrate the Locator (id, css selector, path).
+Locators (ID):
+package test1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Locators {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated qa stub
+		System.setProperty("webdriver.chrome.driver","E:\\Chrome Driver- Selenium\\117.0.5938.63\\chromedriver.exe" );
+		WebDriver wd = new ChromeDriver();
+		wd.get("http://saucedemo.com");
+		wd.findElement(By.id("user-name")).sendKeys("standard_user");
+		wd.findElement(By.name("password")).sendKeys("secret_sauce");
+		wd.findElement(By.className("btn_action")).click();
+		
+	}
+}
+
+
+
+
+
+CSS Selector :
+
+package test1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class CSS_Selector {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","E:\\Chrome Driver- Selenium\\117.0.5938.63\\chromedriver.exe" );
+		WebDriver wd = new ChromeDriver();
+		wd.get("http://saucedemo.com");
+		wd.findElement(By.cssSelector("input#user-name.form_input")).sendKeys("standard_user");//by id
+		wd.findElement(By.cssSelector("input[type=password]")).sendKeys("secret_sauce");//by attribute value
+		wd.findElement(By.cssSelector("input.btn_action")).click();//by class name
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+XPath :
+
+package test1;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Xpath {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver","E:\\Chrome Driver- Selenium\\117.0.5938.63\\chromedriver.exe" );
+		WebDriver wd = new ChromeDriver();
+		wd.get("http://saucedemo.com");
+		wd.findElement(By.xpath("/html/body/div/div/div[2]/div[1]/div/div/form/div[1]/input")).sendKeys("standard_user");
+		wd.findElement(By.xpath("//*[@id=\"password\"]")).sendKeys("secret_sauce");
+		wd.findElement(By.xpath("//*[@id=\"login-button\"]")).click();
+	}
+
+}
+
+
+
