@@ -1,0 +1,51 @@
+Implement Web Drivers on Chrome & Firefox Browsers. 
+LaunchBrowser.java
+package DemoBatch2;
+
+import java.util.Scanner;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class LaunchBrowser {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("1. Chrome Browser");
+		System.out.println("2. Firefox Browser");
+		System.out.println("Your Choice");
+		
+		WebDriver wd;
+		
+		System.setProperty("webdriver.chrome.driver", "E:\\selenium-java-3.141.59\\117.0.5938.63\\chromedriver.exe");
+		
+		int choice = sc.nextInt();
+		
+		switch (choice) {
+		case 1:
+			wd = new ChromeDriver();
+			wd.get("https://siescoms.edu.in");
+			break;
+		case 2:
+			wd = new ChromeDriver();
+			wd.get("https://siesascs.edu.in");
+			break;
+		default:
+			wd = new ChromeDriver();
+			wd.get("https://siescoms.edu.in");
+		}
+	}
+}
+
+
+
+
+
+
+
+
+Output:
+
+
+
