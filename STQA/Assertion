@@ -1,0 +1,24 @@
+Implement Assertion for the title of page.
+Code:
+package testNG;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class HardAssertion {
+
+@Test
+  public void f() {
+	System.setProperty("webdriver.chrome.driver", "E:\\selenium-java-3.141.59\\117.0.5938.63\\chromedriver.exe");
+	WebDriver wd = new ChromeDriver();
+	wd.get("http://www.saucedemo.com");
+	
+	Assert.assertEquals(wd.getTitle(), "Swag Labs");
+	System.out.println("Successfully Passed");
+  }
+}
+
+Output:
+
