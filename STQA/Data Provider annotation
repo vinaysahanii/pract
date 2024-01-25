@@ -1,0 +1,42 @@
+Implement Data provider Annotation on a testing website for username and password.
+Code:
+package testNG;
+
+import org.testng.annotations.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.DataProvider;
+
+public class DemoDataProvider1 {
+  @Test(dataProvider = "dp")
+  public void f(String username, String password) {
+	  	System.setProperty("webdriver.chrome.driver", "E:\\selenium-java-3.141.59\\117.0.5938.63\\chromedriver.exe");
+		WebDriver wd = new ChromeDriver();
+		wd.get("http://www.saucedemo.com");
+		
+		wd.findElement(By.id("user-name")).sendKeys(username);
+		wd.findElement(By.id("password")).sendKeys(password);
+		wd.findElement(By.id("login-button")).click();
+		
+		try {
+			wd.findElement(By.id("react-burger-menu-btn")).click();
+			wd.findElement(By.id("//*[@id=\"logout_sidebar_link\"]")).click();
+			System.out.println("Login Successful");
+		}catch(Exception e) {
+			System.out.println("Login Fail");
+		}
+  }
+
+  @DataProvider
+  public Object[][] dp() {
+    return new Object[][] {
+      new Object[] {"standard_user", "secret_sauce"},
+      new Object[] { "locked_out_user", "secret_sauce" },
+    };
+  }
+}
+Output:
+
+
+
