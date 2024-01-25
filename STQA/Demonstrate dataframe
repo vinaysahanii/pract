@@ -1,0 +1,122 @@
+10) Implement & Demonstrate Dataframes
+
+Read Data code:
+package test1;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+//import org.apache.poi.hssf.usermodel.HSSFCell;
+//import org.apache.poi.hssf.usermodel.HSSFRow;
+//import org.apache.poi.hssf.usermodel.HSSFSheet;
+//import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+//import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class readdataframe {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "E:\\Chrome Driver- Selenium\\117.0.5938.63\\chromedriver.exe");
+		WebDriver wd = new ChromeDriver();
+		wd.get("https://www.saucedemo.com");
+		
+			FileInputStream fis = new FileInputStream("E://demo.xlsx");
+	
+		XSSFWorkbook wb = new XSSFWorkbook(fis);
+		XSSFSheet sh = wb.getSheet("ReadData");
+		for(int i =1; i<=sh.getLastRowNum();i++) {
+			
+			XSSFRow rw = sh.getRow(i);
+			XSSFCell un = rw.getCell(0);    // this cell is for username 
+			XSSFCell pw = rw.getCell(1); 	// this cell is for password i.e rows first cell and second cell 
+			System.out.println("Username----->"+un+ "Password----->"+pw);
+			wd.findElement(By.id("user-name")).sendKeys(un.toString());
+			wd.findElement(By.id("password")).sendKeys(pw.toString());
+			wd.findElement(By.id("login-button")).click();
+		}
+	}
+}
+
+
+
+OUTPUT:
+
+ReadData:
+
+
+
+
+
+
+
+
+
+Write Data Code:
+package test1;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.util.concurrent.TimeUnit;
+
+//import org.apache.poi.hssf.usermodel.HSSFCell;
+//import org.apache.poi.hssf.usermodel.HSSFRow;
+//import org.apache.poi.hssf.usermodel.HSSFSheet;
+//import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFCell;
+import org.apache.poi.xssf.usermodel.XSSFRow;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.By;
+//import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class writedataframe {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "E:\\Chrome Driver- Selenium\\117.0.5938.63\\chromedriver.exe");
+		WebDriver wd = new ChromeDriver();
+		wd.get("https://www.saucedemo.com");
+		wd.manage().timeouts().implicitlyWait(15,TimeUnit.SECONDS);
+			FileInputStream fis = new FileInputStream("E://demo.xlsx");
+	
+		XSSFWorkbook wb = new XSSFWorkbook(fis);
+		XSSFSheet sh = wb.getSheet("ReadData");
+		for(int i =1; i<=sh.getLastRowNum();i++) {
+			
+			XSSFRow rw = sh.getRow(i);
+			XSSFCell un = rw.getCell(0);    // this cell is for username 
+			XSSFCell pw = rw.getCell(1); 	// this cell is for password i.e rows first cell and second cell
+			XSSFCell res=rw.createCell(2);
+			System.out.println("Username----->"+un+ "Password----->"+pw);
+			wd.findElement(By.id("user-name")).sendKeys(un.toString());
+			wd.findElement(By.id("password")).sendKeys(pw.toString());
+			wd.findElement(By.id("login-button")).click();
+			try {
+				
+				wd.findElement(By.xpath("//*[@id=\"react-burger-menu-btn\"]")).click();
+				wd.findElement(By.id("logout_sidebar_link")).click();
+				System.out.println("Login Successfully");
+				res.setCellValue("Valid");
+			}catch(Exception e) {
+				System.out.println("Login Fail");
+				res.setCellValue("InValid");
+			}
+		}
+		fis.close();
+		FileOutputStream fos=new FileOutputStream("E://demo.xlsx");
+		wb.write(fos);
+	}
+}
+Writedata:
+
+
