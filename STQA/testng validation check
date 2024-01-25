@@ -1,0 +1,31 @@
+Implement Validation check in testng
+ValidationCheck.java
+
+package testng;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+public class ValidationCheck {
+  @Test
+  public void CheckBox() {
+	  System.setProperty("webdriver.chrome.driver", "E:\\Chrome Driver- Selenium\\117.0.5938.63\\chromedriver.exe");
+	  WebDriver wd = new ChromeDriver();
+	  
+	  wd.get("http://mail.rediff.com/cgi-bin/login.cgi");
+	  
+	  boolean sts = wd.findElement(By.name("remember")).isSelected();
+	  Assert.assertTrue(sts);	
+  }
+}
+
+Output:
+
+
+
+
+
+	
